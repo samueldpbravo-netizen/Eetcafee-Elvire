@@ -69,7 +69,7 @@ button{font:inherit;color:inherit}
 .home__boven span:nth-child(2){display:none}
 .woordmerk{display:flex;justify-content:space-between;align-items:flex-end;margin:clamp(1.4rem,4vh,3rem) 0 0;
   font:800 clamp(6.4rem,min(31vw,44vh),30rem)/.78 var(--display);letter-spacing:0;user-select:none;overflow:hidden;padding-top:.06em}
-.woordmerk span{display:inline-block;transform-origin:50% 100%;transform:scaleY(var(--sy,1.12));font-variation-settings:"wght" var(--w,800);will-change:transform}
+.woordmerk span{display:inline-block;text-shadow:.045em .03em 0 var(--beige);transform-origin:50% 100%;transform:scaleY(var(--sy,1.12));font-variation-settings:"wght" var(--w,800);will-change:transform}
 .home__onder{display:grid;gap:1.6rem;align-content:start;margin-top:clamp(1.2rem,3vh,2.4rem);padding-top:clamp(1rem,2.5vh,1.8rem);border-top:2px solid var(--bordeaux)}
 .home__intro{font-size:clamp(1.25rem,2.3vw,1.7rem);line-height:1.3;font-weight:500;max-width:28ch;margin:0}
 .home__intro b{font-weight:800}
@@ -97,7 +97,7 @@ button{font:inherit;color:inherit}
 /* ---------- 2. Elvire (verhaal) ---------- */
 .verhaal{padding:clamp(4.5rem,11vw,10rem) var(--rand);display:grid;gap:3rem}
 .verhaal__kop{font-size:clamp(3rem,9.5vw,8.4rem);max-width:12ch}
-.verhaal__kop em{font-style:normal;color:var(--grijs);background:var(--bordeaux);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.verhaal__kop em{font-style:normal;color:var(--bordeaux);background:var(--beige);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .verhaal__tekst{max-width:46ch;font-size:1.1rem}
 .verhaal__tekst .lead{font-size:clamp(1.3rem,2.2vw,1.6rem);line-height:1.35;font-weight:600}
 .teller{display:flex;align-items:flex-end;gap:1rem;margin-top:2rem;padding-top:1.4rem;border-top:2px solid var(--bordeaux)}
@@ -107,7 +107,8 @@ button{font:inherit;color:inherit}
 .verhaal__foto figcaption{font:700 .74rem/1 var(--tekst);letter-spacing:.18em;text-transform:uppercase;margin-top:.7rem}
 
 /* Foto's: venster met een onthulling van onder naar boven */
-.kader{position:relative;overflow:hidden;background:color-mix(in srgb,var(--bordeaux) 12%,var(--grijs));aspect-ratio:var(--ar,4/5)}
+.kader{position:relative;overflow:hidden;background:var(--beige);aspect-ratio:var(--ar,4/5);box-shadow:inset 0 0 0 1px var(--beige)}
+.verhaal__foto,.beelden__raster figure{padding:10px 10px 12px;background:var(--beige)}
 .kader img{width:100%;height:120%;object-fit:cover;transform:translateY(var(--py,-8%)) scale(1.04)}
 .kader.is-leeg img{opacity:0}
 .kader.is-leeg::after{content:"Foto";position:absolute;inset:0;display:grid;place-items:center;font:800 1.4rem var(--display);letter-spacing:.2em;text-transform:uppercase;opacity:.4}
@@ -115,7 +116,7 @@ button{font:inherit;color:inherit}
 .js .kader.is-zicht{clip-path:inset(0 0 0 0);transition:clip-path 1.2s var(--zacht) var(--d,0s)}
 
 /* ---------- 3. Diner ---------- */
-.diner{padding:clamp(4rem,9vw,8rem) 0 clamp(3rem,6vw,5rem);border-top:2px solid var(--bordeaux)}
+.diner{padding:clamp(4rem,9vw,8rem) 0 clamp(3rem,6vw,5rem);border-top:3px solid var(--bordeaux);background:var(--beige)}
 .diner__kop{display:grid;gap:1rem;align-items:end;padding:0 var(--rand);margin-bottom:clamp(2rem,5vw,4rem)}
 .diner__kop h2{font-size:clamp(5rem,22vw,19rem);line-height:.78}
 .diner__kop p{max-width:34ch;font-weight:600;margin:0}
@@ -133,7 +134,7 @@ button{font:inherit;color:inherit}
 .g__naam small{font:700 .72rem/1 var(--tekst);letter-spacing:.1em;margin-left:.5em;vertical-align:.3em}
 .g__prijs{font:800 clamp(1.45rem,2.6vw,1.9rem)/1 var(--display);font-variant-numeric:tabular-nums;text-align:right}
 .g__wat{grid-column:1 / -1;font-size:.98rem;font-weight:500}
-.diner__voet{margin:2rem var(--rand) 0;padding:1.4rem;border:2px dashed var(--bordeaux);display:grid;gap:.4rem;font-weight:500;max-width:760px}
+.diner__voet{margin:2rem var(--rand) 0;padding:1.4rem;border:2px dashed var(--bordeaux);background:var(--grijs);display:grid;gap:.4rem;font-weight:500;max-width:760px}
 .diner__voet p{margin:0}
 .diner__voet b{font-weight:800}
 
